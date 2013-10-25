@@ -22,4 +22,6 @@ print('The device must begin with the Start Task and end with the Final Task as 
 3_c = input('Y/n')
 if 3_c == 'N' or 3_c == 'n':
   tier == 'Tier 2'
-print('The machine is automot
+print('The machine operates autonomously.')
+3_d = input('Y/n')
+if 3_d == '
