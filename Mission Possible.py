@@ -6,12 +6,12 @@ print(d)
 file = open('Mission Possible ' + d + '.txt','w')
 print("2014 LA Regionals")
 print("Mission Possible")
-#Safety Test
 name = input('Name:')
 file.write('Mission Possible\n')
 file.write('Test Date:' + d +'\n')
 file.write('Name:' + name + '\n')
 pts = 0
+#Safety Test
 safety = input("Is the device safe? Y/n:")
 file.write('Safe to operate-' + safety + '\n')
 if safety == 'N' or safety == 'n':
@@ -21,6 +21,7 @@ if safety == 'N' or safety == 'n':
     quit()
 #Construction Test Pt. 1
 tier = 'Tier 1'
+##Dimension Check
 print("All parts of the device must fit and stay within a 60.0 cm x 60.0 cm x 60.0 cm box before, during, and after operation.")
 c_a = input("Y/n:")
 file.write('All parts of the device must fit and stay within a 60.0 cm x 60.0 cm x 60.0 cm box before, during, and after operation:' + c_a + '\n')
@@ -71,7 +72,7 @@ c_k = input("Y/n:")
 file.write('No hazardous spills, leaks, sparks: ' + c_k + '\n')
 if c_k == "N" or c_k =="n":
     tier = 'Tier 2'
-#ETL
+#ETL Check
 sub = input("Submission of Energy Transfer List. Y/n:")
 file.write('ETL\n')
 file.write('ETL Submitted? ' + sub  + '\n')
