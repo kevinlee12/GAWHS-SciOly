@@ -154,7 +154,6 @@ pts = pts - p_pts
 parallel = input('Did the device at any time parallel task? Or hit a dead end? Y/n:')
 if parallel == 'Y' or parallel == 'y':
     tier = 'Tier 3'
-
 print('Total points: ' + str(pts))
 print('Tier' + tier + '\n')
 file.write('Tier: ' + tier + '\n')
