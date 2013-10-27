@@ -9,7 +9,7 @@ print("Mission Possible")
 #Safety Test
 name = input('Name:')
 file.write('Mission Possible\n')
-file.write('Test Date:' + d)
+file.write('Test Date:' + d +'\n')
 file.write('Name:' + name + '\n')
 pts = 0
 safety = input("Is the device safe? Y/n:")
