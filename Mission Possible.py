@@ -22,6 +22,7 @@ if safety == 'N' or safety == 'n':
 #Construction Test Pt. 1
 tier = 'Tier 1'
 ##Dimension Check
+#Variables are consistent with the rules in the rulebook.
 print("All parts of the device must fit and stay within a 60.0 cm x 60.0 cm x 60.0 cm box before, during, and after operation.")
 c_a = input("Y/n:")
 file.write('All parts of the device must fit and stay within a 60.0 cm x 60.0 cm x 60.0 cm box before, during, and after operation:' + c_a + '\n')
