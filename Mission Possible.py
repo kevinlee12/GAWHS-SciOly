@@ -114,7 +114,7 @@ if s_e > 5:
     s_e = 5
 e_pts = e_pts + 20*s_e
 file.write('Second time energy use:' + str(20*s_e) + '\n')
-t_e = input('Times an Energy was used for the Second time: ')
+t_e = input('Times an Energy was used for the Third time: ')
 t_e = int(t_e)
 if t_e > 5:
     t_e = 5
@@ -156,7 +156,7 @@ parallel = input('Did the device at any time parallel task? Or hit a dead end? Y
 if parallel == 'Y' or parallel == 'y':
     tier = 'Tier 3'
 print('Total points: ' + str(pts))
-print('Tier' + tier + '\n')
+print('Tier: ' + tier + '\n')
 file.write('Tier: ' + tier + '\n')
 file.write('Total points: ' + str(pts))
-file.close
+file.close()
