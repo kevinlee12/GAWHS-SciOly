@@ -54,6 +54,7 @@ if c_i == 'N' or c_i == 'n':
     tier = 'Tier 3'
 #-------------------------------------------------------------------------------
 #Competition - denoted using 'cc' variable
+score = 0
 #-------------------------------------------------------------------------------
 cc_d = input('Team does not roll their car on the track prior to actual test run. Y/n')
 file.write('Team does not roll their car on the track prior to actual test run: ' + cc_d + '\n')
@@ -75,10 +76,53 @@ if cc_f == 'N' or cc_f == 'n':
     tier = 'Tier 2'
 print('Remind team to remove all sighting/aiming contraptions, press Enter to continue.')
 input()
-cc_h = input('Scrambler may be run only when triggered by No.2 pencil. Y/n')
+cc_h = input('Scrambler may be run only when triggered by No.2 pencil. Y/n:')
 file.write('Scrambler may be run only when triggered by No.2 pencil: ' + cc_h + '\n')
 if cc_h == 'N' or cc_h == 'n':
     if tier == 'Tier 3':
         pass
     tier = 'Tier 2'
-    
+cc_n = input('Does the Scrambler pass the 0.2 m line but stop before the 8.2 m line? Y/n:')
+file.write('Does the Scrambler pass the 0.2 m line but stop before the 8.2 m line? ' + cc_n + '\n')
+if cc_n == 'Y' or cc_n == 'y':
+    if tier == 'Tier 3':
+        pass
+    tier = 'Tier 2'
+cc_m = input('Does the Scrambler leave the 1.5 m track? Y/n:')
+file.write('Does the Scrambler leave the 1.5 m track?: ' + cc_m + '\n')
+if cc_m == 'Y' or cc_m == 'y':
+    score = 5000
+    if tier == 'Tier 3':
+        pass
+    tier = 'Tier 2'
+cc_o = input('Is the egg broken? Y/n:')
+file.write('Is the egg broken? ' + cc_o + '\n')
+if cc_o == 'Y' or cc_o == 'y':
+    if tier == 'Tier 3':
+        pass
+    tier = 'Tier 2'
+#-----------------------------------------------------------------------
+#Scoring
+#-----------------------------------------------------------------------
+print('If car fails to reach 0.2 m line, leave next line blank.')
+time = input('Time (secs):')
+#Fail run:
+if time == '':
+    time = 'Failed Run' 
+    file.write('Time Score: ' + time + '\n')
+#Non-fail run:
+else: 
+    file.write('Time Run: ' + time + '\n')
+    time_score = float(time)*5
+    file.write('Time Score: ' + str(time_score) + '\n')
+    distance = input('Distance (nearest 0.1 cm): ')
+    file.write('Distance: ' + distance + '\n')
+
+if score == 5000:
+    pass
+else:
+    score = time_score + float(distance)
+
+file.write('Final Score:' + score + '\n')
+file.write('Tier: ' + tier)
+file.close()
