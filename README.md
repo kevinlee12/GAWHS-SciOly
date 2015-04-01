@@ -23,8 +23,3 @@ Science Olympiad Construction Trials
 
 <h4>To do: </h4>
 - Convert to non-hard coded platform for the rules
-
-<h4> Contributing: </h4>
-If you are contributing to the code base, please fork the repo, make changes, and then make a pull request. I will provide necessary feedback if needed or pull the code directly. 
-If you are creating issues, please be advised that I am not actively maintaining this repo (but will assign the bugs to contributors if need be).
-Please see: <a href="https://guides.github.com/activities/contributing-to-open-source/"> https://guides.github.com/activities/contributing-to-open-source/ </a> for more details. 
